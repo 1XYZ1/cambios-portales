@@ -13,7 +13,17 @@
     "@tailwindcss/vite": "^4.0.3",
     "astro": "^5.2.5",
     "chart.js": "^4.4.7",
-    "solid-js": "^1.9.4",
+    "solid-js": "^1.9.4"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "^6.0.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.1",
     "tailwindcss": "^4.0.3"
-  }
+  },
+  "description": "```sh npm create astro@latest -- --template basics ```",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
