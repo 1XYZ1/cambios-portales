@@ -1,0 +1,49 @@
+---
+import type { Props } from 'astro';
+interface RotationInterval {
+  interval: string;
+  onField: string[];
+}
+
+interface RotationProps {
+  title: string;
+  data: RotationInterval[];
+}
+
+const { title, data } = Astro.props as unknown as RotationProps;
+---
+
+<section class="bg-gray-800/50 backdrop-blur-sm rounded-xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl">
+  <div class="p-6 border-b border-gray-700">
+    <h2 class="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 text-transparent bg-clip-text">
+      {title}
+    </h2>
+  </div>
+
+  <div class="overflow-x-auto">
+    <table class="w-full text-left">
+      <thead>
+        <tr class="bg-gray-700/30">
+          <th class="px-4 py-3 font-semibold text-gray-300">Intervalo</th>
+          <th class="px-4 py-3 font-semibold text-gray-300">Jugadores en cancha</th>
+        </tr>
+      </thead>
+      <tbody>
+        {data.map((intervalData) => (
+          <tr class="border-t border-gray-700/50 transition-colors hover:bg-gray-700/30">
+            <td class="px-4 py-3 font-medium text-teal-400">{intervalData.interval}</td>
+            <td class="px-4 py-3">
+              <div class="flex flex-wrap gap-2">
+                {intervalData.onField.map((player) => (
+                  <span class="inline-flex items-center px-3 py-1 rounded-full bg-gray-700/50 text-sm font-medium hover:bg-gray-600/50 transition-colors">
+                    {player}
+                  </span>
+                ))}
+              </div>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>

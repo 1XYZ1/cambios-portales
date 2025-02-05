@@ -1,11 +1,65 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import BaseLayout from '../layouts/Layout.astro';
+import RotationTable from '../components/RotationTable.astro';
+// Importa el componente SolidJS
+import RotationChart from '../components/RotationChart.jsx';
+import { rotationData } from '../data/rotacionData';
+import { playerStats } from '../data/playerStats';
+import { substitutions } from '../data/cambios';
+import SubstitutionTable from '../components/SubstitutionTable.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Preparar datos para el gráfico desde playerStats
+const chartData = {
+  labels: playerStats.map(player => player.name),
+  minutes: playerStats.map(player => player.minutesPlayed)
+};
+
+// Formatear los intervalos para mostrar el símbolo de minuto
+const formattedSubstitutions = substitutions.map(sub => ({
+  ...sub,
+  interval: `${sub.interval}'`
+}));
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Rotaciones del Partido">
+  <div class="grid gap-8">
+    <div class="mb-6">
+      <p class="text-lg text-gray-300">
+        Visualiza las rotaciones del partido por intervalos y el resumen de minutos jugados por cada jugador.
+      </p>
+    </div>
+
+    <!-- Tablas de rotación para cada mitad -->
+    <RotationTable
+      title="Primer Tiempo (0' - 20')"
+      data={rotationData.firstHalf}
+    />
+
+    <RotationTable
+      title="Segundo Tiempo (20' - 40')"
+      data={rotationData.secondHalf}
+    />
+
+    <!-- Plan de cambios usando los datos de cambios.ts -->
+    <SubstitutionTable
+      title="Plan de Cambios"
+      substitutions={formattedSubstitutions}
+    />
+
+    <!-- Gráfico de minutos jugados -->
+    <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl shadow-xl overflow-hidden">
+      <div class="p-6 border-b border-gray-700">
+        <h2 class="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-teal-400 text-transparent bg-clip-text">
+          Minutos Jugados por Jugador
+        </h2>
+      </div>
+      <div class="p-6">
+        <RotationChart
+          client:load
+          labels={chartData.labels}
+          data={chartData.minutes}
+        />
+      </div>
+    </div>
+  </div>
+</BaseLayout>
