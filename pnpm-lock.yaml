@@ -10,13 +10,13 @@ importers:
     dependencies:
       '@astrojs/solid-js':
         specifier: ^5.0.4
-        version: 5.0.4(jiti@2.4.2)(lightningcss@1.29.1)(solid-js@1.9.4)(yaml@2.7.0)
+        version: 5.0.4(jiti@2.4.2)(lightningcss@1.29.1)(solid-js@1.9.4)
       '@tailwindcss/vite':
         specifier: ^4.0.3
-        version: 4.0.3(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.7.0))
+        version: 4.0.3(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1))
       astro:
         specifier: ^5.2.5
-        version: 5.2.5(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.3)(typescript@5.7.3)(yaml@2.7.0)
+        version: 5.2.5(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.3)(typescript@5.7.3)
       chart.js:
         specifier: ^4.4.7
         version: 4.4.7
@@ -24,9 +24,6 @@ importers:
         specifier: ^1.9.4
         version: 1.9.4
     devDependencies:
-      '@astrojs/tailwind':
-        specifier: ^6.0.0
-        version: 6.0.0(astro@5.2.5(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.3)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@4.0.3)
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.5.1)
@@ -65,12 +62,6 @@ packages:
     peerDependenciesMeta:
       solid-devtools:
         optional: true
-
-  '@astrojs/tailwind@6.0.0':
-    resolution: {integrity: sha512-GbEK2/h0nvY8i6g1GZT5ddHAgj71lQIf34/j7+jPLhUti3xDxKcWElApDe2jWvqAaKl2oKEh045ITSm8mU9BVQ==}
-    peerDependencies:
-      astro: ^3.0.0 || ^4.0.0 || ^5.0.0
-      tailwindcss: ^3.0.24
 
   '@astrojs/telemetry@3.2.0':
     resolution: {integrity: sha512-wxhSKRfKugLwLlr4OFfcqovk+LIFtKwLyGPqMsv+9/ibqqnW3Gv7tBhtKEb0gAyUAC4G9BTVQeQahqnQAhd6IQ==}
@@ -1217,10 +1208,6 @@ packages:
     resolution: {integrity: sha512-FmGoeD4S05ewj+AkhTY+D+myDvXI6eL27FjHIjoyUkO/uw7WZD1fBVs0QxeYWa7E17CUHJaYX/RUGISCtcrG4Q==}
     engines: {node: '>= 12.0.0'}
 
-  lilconfig@3.1.3:
-    resolution: {integrity: sha512-/vlFKAoH5Cgt3Ie+JLhRbwOsCQePABiU3tJ1egGvyQ+33R/vcwM2Zl2QR/LzjsBeItPt3oSVXapn+m4nQDvpzw==}
-    engines: {node: '>=14'}
-
   load-yaml-file@0.2.0:
     resolution: {integrity: sha512-OfCBkGEw4nN6JLtgRidPX6QxjBQGQf72q3si2uvqyFEMbycSFFHwAZeXx6cJgFM9wmLrf9zBwCP3Ivqa+LLZPw==}
     engines: {node: '>=6'}
@@ -1484,18 +1471,6 @@ packages:
   pkg-dir@4.2.0:
     resolution: {integrity: sha512-HRDzbaKjC+AOWVXxAU/x54COGeIv9eb+6CkDSQoNTt4XyWoIJvuPsXizxu/Fr23EiekbtZwmh1IcIG/l/a10GQ==}
     engines: {node: '>=8'}
-
-  postcss-load-config@4.0.2:
-    resolution: {integrity: sha512-bSVhyJGL00wMVoPUzAVAnbEoWyqRxkjv64tUl427SKnPrENtq6hJwUojroMz2VB+Q1edmi4IfrAPpami5VVgMQ==}
-    engines: {node: '>= 14'}
-    peerDependencies:
-      postcss: '>=8.0.9'
-      ts-node: '>=9.0.0'
-    peerDependenciesMeta:
-      postcss:
-        optional: true
-      ts-node:
-        optional: true
 
   postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
@@ -1911,11 +1886,6 @@ packages:
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  yaml@2.7.0:
-    resolution: {integrity: sha512-+hSoy/QHluxmC9kCIJyL/uyFmLmc+e5CFR5Wa+bpIhIj85LVb9ZH2nVnqrHoSvKogwODv0ClqZkmiSSaIH5LTA==}
-    engines: {node: '>= 14'}
-    hasBin: true
-
   yargs-parser@21.1.1:
     resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
     engines: {node: '>=12'}
@@ -1989,11 +1959,11 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/solid-js@5.0.4(jiti@2.4.2)(lightningcss@1.29.1)(solid-js@1.9.4)(yaml@2.7.0)':
+  '@astrojs/solid-js@5.0.4(jiti@2.4.2)(lightningcss@1.29.1)(solid-js@1.9.4)':
     dependencies:
       solid-js: 1.9.4
-      vite: 6.1.0(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.7.0)
-      vite-plugin-solid: 2.11.1(solid-js@1.9.4)(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.7.0))
+      vite: 6.1.0(jiti@2.4.2)(lightningcss@1.29.1)
+      vite-plugin-solid: 2.11.1(solid-js@1.9.4)(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1))
     transitivePeerDependencies:
       - '@testing-library/jest-dom'
       - '@types/node'
@@ -2008,16 +1978,6 @@ snapshots:
       - terser
       - tsx
       - yaml
-
-  '@astrojs/tailwind@6.0.0(astro@5.2.5(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.3)(typescript@5.7.3)(yaml@2.7.0))(tailwindcss@4.0.3)':
-    dependencies:
-      astro: 5.2.5(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.3)(typescript@5.7.3)(yaml@2.7.0)
-      autoprefixer: 10.4.20(postcss@8.5.1)
-      postcss: 8.5.1
-      postcss-load-config: 4.0.2(postcss@8.5.1)
-      tailwindcss: 4.0.3
-    transitivePeerDependencies:
-      - ts-node
 
   '@astrojs/telemetry@3.2.0':
     dependencies:
@@ -2481,13 +2441,13 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.0.3
       '@tailwindcss/oxide-win32-x64-msvc': 4.0.3
 
-  '@tailwindcss/vite@4.0.3(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.7.0))':
+  '@tailwindcss/vite@4.0.3(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1))':
     dependencies:
       '@tailwindcss/node': 4.0.3
       '@tailwindcss/oxide': 4.0.3
       lightningcss: 1.29.1
       tailwindcss: 4.0.3
-      vite: 6.1.0(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.7.0)
+      vite: 6.1.0(jiti@2.4.2)(lightningcss@1.29.1)
 
   '@types/babel__core@7.20.5':
     dependencies:
@@ -2563,7 +2523,7 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
-  astro@5.2.5(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.3)(typescript@5.7.3)(yaml@2.7.0):
+  astro@5.2.5(jiti@2.4.2)(lightningcss@1.29.1)(rollup@4.34.3)(typescript@5.7.3):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.5.1
@@ -2615,8 +2575,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.14.4
       vfile: 6.0.3
-      vite: 6.1.0(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.7.0)
-      vitefu: 1.0.5(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.7.0))
+      vite: 6.1.0(jiti@2.4.2)(lightningcss@1.29.1)
+      vitefu: 1.0.5(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1))
       which-pm: 3.0.1
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
@@ -3145,8 +3105,6 @@ snapshots:
       lightningcss-win32-arm64-msvc: 1.29.1
       lightningcss-win32-x64-msvc: 1.29.1
 
-  lilconfig@3.1.3: {}
-
   load-yaml-file@0.2.0:
     dependencies:
       graceful-fs: 4.2.11
@@ -3586,13 +3544,6 @@ snapshots:
     dependencies:
       find-up: 4.1.0
 
-  postcss-load-config@4.0.2(postcss@8.5.1):
-    dependencies:
-      lilconfig: 3.1.3
-      yaml: 2.7.0
-    optionalDependencies:
-      postcss: 8.5.1
-
   postcss-value-parser@4.2.0: {}
 
   postcss@8.5.1:
@@ -3987,7 +3938,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite-plugin-solid@2.11.1(solid-js@1.9.4)(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.7.0)):
+  vite-plugin-solid@2.11.1(solid-js@1.9.4)(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1)):
     dependencies:
       '@babel/core': 7.26.7
       '@types/babel__core': 7.20.5
@@ -3995,12 +3946,12 @@ snapshots:
       merge-anything: 5.1.7
       solid-js: 1.9.4
       solid-refresh: 0.6.3(solid-js@1.9.4)
-      vite: 6.1.0(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.7.0)
-      vitefu: 1.0.5(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.7.0))
+      vite: 6.1.0(jiti@2.4.2)(lightningcss@1.29.1)
+      vitefu: 1.0.5(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1))
     transitivePeerDependencies:
       - supports-color
 
-  vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.7.0):
+  vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1):
     dependencies:
       esbuild: 0.24.2
       postcss: 8.5.1
@@ -4009,11 +3960,10 @@ snapshots:
       fsevents: 2.3.3
       jiti: 2.4.2
       lightningcss: 1.29.1
-      yaml: 2.7.0
 
-  vitefu@1.0.5(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.7.0)):
+  vitefu@1.0.5(vite@6.1.0(jiti@2.4.2)(lightningcss@1.29.1)):
     optionalDependencies:
-      vite: 6.1.0(jiti@2.4.2)(lightningcss@1.29.1)(yaml@2.7.0)
+      vite: 6.1.0(jiti@2.4.2)(lightningcss@1.29.1)
 
   web-namespaces@2.0.1: {}
 
@@ -4036,8 +3986,6 @@ snapshots:
   xxhash-wasm@1.1.0: {}
 
   yallist@3.1.1: {}
-
-  yaml@2.7.0: {}
 
   yargs-parser@21.1.1: {}
 

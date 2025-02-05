@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "tailwind:init": "tailwindcss init -p"
   },
   "dependencies": {
     "@astrojs/solid-js": "^5.0.4",
@@ -16,7 +17,6 @@
     "solid-js": "^1.9.4"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "^6.0.0",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.1",
     "tailwindcss": "^4.0.3"
